@@ -1,0 +1,20 @@
+---
+
+- hosts: cluster
+  gather_facts: yes
+  become: yes
+  become_user: root
+
+  roles:
+    - prereq
+    - download
+
+- hosts: masters
+  become: yes
+  roles:
+    - role: k3s/masters
+
+- hosts: agents
+  become: yes
+  roles:
+    - role: k3s/agents

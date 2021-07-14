@@ -1,0 +1,9 @@
+---
+
+- hosts: nodes
+  gather_facts: yes
+  become: yes
+  become_user: root
+
+  roles:
+    - security
