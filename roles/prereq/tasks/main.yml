@@ -37,3 +37,5 @@
 
 - name: Reboot machine
   reboot:
+    post_reboot_delay: 30
+    reboot_timeout: 300
