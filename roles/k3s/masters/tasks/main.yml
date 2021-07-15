@@ -62,7 +62,7 @@
 - name: Specifying a destination path
   fetch:
     src: ~{{ ansible_user }}/.kube/config
-    dest: ~/
+    dest: ~/.kube/config
     flat: yes
 
 - name: Replace https://localhost:6443 by https://master-ip:6443
